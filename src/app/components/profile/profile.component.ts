@@ -7,9 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  public info:any = [];
+  public repos:any = [];
+  public profiles: any = []
+ 
+  constructor(private RepositoryService:UserService) { 
 
+      this.RepositoryService.getUserInfo().subscribe(info => {
+        console.log(info);
+        this.info = info;
+      });
+      this.RepositoryService.getUserRepos().subscribe(repos => {
+        console.log("repo" + repos);
+        this.repos=repos;
+      });
+   }
+  
   ngOnInit(): void {
+    this.RepositoryService.getProfiles().subscribe((data)=> {
+      this.profiles = data;
+      console.log(data)
+    })
   }
+
 
 }
