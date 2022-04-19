@@ -39,6 +39,12 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 * js  -This was used to add functionality to the website.
 * Angular CLI
+### Usage / BDD
+Click on the link provided.
+This will get you into the Landing page
+Scroll down to learn more.
+Click on the what we do Icons to see more
+For contact fill all the inputs and we will reach out
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
