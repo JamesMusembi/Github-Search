@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
+// import { HttpClientModule } from '@angular/common/http';
+// import { RepoService } from 'src/app/services/repo.service';
+
 
 @Component({
   selector: 'app-github-app',
@@ -49,4 +53,4 @@ export class GithubAppComponent implements OnInit {
    
 }
 
-}
+
