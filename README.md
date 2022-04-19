@@ -45,6 +45,12 @@ This will get you into the Landing page
 Scroll down to learn more.
 Click on the what we do Icons to see more
 For contact fill all the inputs and we will reach out
+## License -Copyright 
+
+MIT License
+
+Copyright © license 2022 ,James Musembi, student Moringa school.
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
