@@ -7,9 +7,46 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GithubAppComponent implements OnInit {
 
-  constructor() { }
+  profile: any = [];
+  repos: any = [];
+  info: any=[];
+  username: any;
+  display: any =true;
+ 
+  constructor(private profileService:UserService) { 
 
-  ngOnInit(): void {
+    this.profileService.getUserInfo().subscribe(info => {
+      console.log("repos.3" + info);
+      this.info = info;
+    });
+
+    this.profileService.getUserRepos().subscribe(repos => {
+      console.log(repos);
+      this.repos=repos;
+    });
   }
+
+  ngOnInit(): void {}
+
+  findUser() {  
+    this.display = false
+    this.profileService.updateProfile(this.username);
+    this.profileService.getProfileInfo().subscribe((profile) => {
+      console.log(profile);
+      this.profile = profile;
+    });
+
+    this.profileService.getRepos(this.username).subscribe((repos) => {
+      console.log("repos.1" + repos);
+      this.repos = repos;
+    });
+
+    this.profileService.getProfileInfo().subscribe((info) => {
+      console.log("repos.2" + info);
+      this.info = info;
+    });
+  }
+   
+}
 
 }
